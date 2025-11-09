@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carvalho locações</title>
+    <link rel="stylesheet" href="https://use.typekit.net/abc123xyz.css">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="base.css">
+    <link rel="shortcut icon" href="fotos/favicon.ico" type="image/x-icon" />
+
+</head>
+
+<body>
+
+    <header>
+
+        <nav>
+            <a href="home.html">
+              <img class="logo" src="fotos/logo.png" alt="Logo carvalho locações" width="130px" height="100px"/>
+            </a>
+        
+            <div class="nav-links">
+              <a class="Home" href="home.html">Início</a>
+              <a href="home.html#sobre-nos">Sobre nós</a>
+              <a href="home.html#equipamentos">Equipamentos</a>
+              <a href="nossos-serviços.html">Nossos Serviços</a>
+            </div>
+        </nav>
+
+    </header>
+
+    <div class="casa">
+
+        <img class="guindaste_intro" src="fotos/IMG-20251105-WA0026.jpg" alt="guindaste  raio total" />
+
+        <h1 class="casa_h1">
+          Serviços
+        </h1>
+    </div>
+
+    <main>
+
+      <section class="guindastes-section" id="equipamentos">
+
+        <div class="titulo">
+          <h2>Fotos</h2>
+        </div>
+
+        <div class="container">
+
+          <div class="guindaste-card">
+            <img src="fotos/IMG-20251105-WA0006.jpg" >           
+          </div>
+
+          <div class="guindaste-card">
+            <img src="fotos/IMG-20251105-WA0007.jpg" >          
+          </div>
+
+          <div class="guindaste-card">
+            <img src="fotos/IMG-20251105-WA0008.jpg" >
+          </div>
+
+          <div class="guindaste-card">
+            <img src="fotos/IMG-20251105-WA0009.jpg" >           
+          </div>
+
+          <div class="guindaste-card">
+            <img src="fotos/IMG-20251105-WA0011.jpg" >
+          </div>
+
+          <div class="guindaste-card">
+            <img src="fotos/IMG-20251105-WA0012.jpg" >           
+          </div>
+
+          <div class="guindaste-card">
+            <img src="fotos/IMG-20251105-WA0013.jpg" >          
+          </div>
+
+          <div class="guindaste-card">
+            <img src="fotos/IMG-20251105-WA0015.jpg" >           
+          </div>
+
+          <div class="guindaste-card">
+            <img src="fotos/IMG-20251105-WA0016.jpg" >          
+          </div>
+
+          <div class="guindaste-card">
+            <img src="fotos/IMG-20251105-WA0017.jpg" >
+          </div>
+
+          <div class="guindaste-card">
+            <img src="fotos/IMG-20251105-WA0018.jpg" >           
+          </div>
+
+          <div class="guindaste-card">
+            <img src="fotos/IMG-20251105-WA0019.jpg" >          
+          </div>
+
+          <div class="guindaste-card">
+            <img src="fotos/IMG-20251105-WA0021.jpg" >           
+          </div>
+
+          <div class="guindaste-card">
+            <img src="fotos/IMG-20251105-WA0027.jpg" >          
+          </div>
+
+        </div>
+
+        <div class="titulo-2">
+          <h2>Vídeos</h2>
+        </div>
+
+        <div class="container videos-container">
+
+          <div class="guindaste-card-video">
+            <video controls preload="metadata" playsinline>
+              <source src="fotos/VID-20251107-WA0002.mp4" type="video/mp4">
+              Seu navegador não suporta vídeo HTML5.
+            </video>
+          </div>
+
+          <div class="guindaste-card-video">
+            <video controls preload="metadata" playsinline>
+              <source src="fotos/VID-20251108-WA0003.mp4" type="video/mp4">
+              Seu navegador não suporta vídeo HTML5.
+            </video>
+          </div>
+
+          <div class="videos-horizontal">
+            <div class="guindaste-card-video">
+              <video controls preload="metadata" playsinline>
+                <source src="fotos/VID-20251108-WA0004.mp4" type="video/mp4">
+                Seu navegador não suporta vídeo HTML5.
+              </video>
+            </div>
+
+            <div class="guindaste-card-video">
+              <video controls preload="metadata" playsinline>
+                <source src="fotos/VID-20251108-WA0004.mp4" type="video/mp4">
+                Seu navegador não suporta vídeo HTML5.
+              </video>
+            </div>
+          </div>
+
+        </div>
+          <script>
+            // Só um vídeo toca por vez
+            const videos = document.querySelectorAll('video');
+            
+            videos.forEach(video => {
+              video.addEventListener('play', () => {
+                videos.forEach(otherVideo => {
+                  if (otherVideo !== video) {
+                    otherVideo.pause();
+                  }
+                });
+              });
+            });
+          </script>
+        </div>
+
+      </section>
+
+    </main>
+
+    <footer>
+      
+      <div class="listas">
+
+        <div class="lista-esquerda">
+          <ul>
+            <li><h3>Informações de Contato</h3>
+            <li>📍 ROD BR-116 - APT 806 - BLOCO 03 - PR
+            <li>📱 (41) 9997-9826           
+            <li>✉️ FUTURAHT@GMAIL.COM
+          </ul>
+        </div>
+
+        <div class="lista-meio">
+          <ul>
+            <li><h3>Informações Empresariais</h3>
+              <li>Inscrição Estadual: 9112176273
+              <li>CNPJ: 58.273.481/0001-99         
+         </ul>
+        </div>
+
+        <div class="lista-direita">
+          <ul>
+            <li><h3>Horário de Funcionamento</h3>
+            <li>Segunda a Sexta: 9h às 18h   
+            <li> Sábado: 9h às 13h              
+            <li>Domingo: Fechado
+          </ul>
+        </div>
+
+      </div> 
+
+      <a href="https://wa.me/4199979826" class="whatsapp-float" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
+             alt="WhatsApp" 
+             class="whatsapp-img">
+     </a>
+
+     
+    </footer>
+
+</body>
+</html>

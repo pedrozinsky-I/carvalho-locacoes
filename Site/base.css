@@ -1,0 +1,135 @@
+/* base.css - coisas comuns às duas páginas */
+@charset "utf-8";
+
+/* Fontes */
+@font-face {
+  font-family: 'nunito';
+  src: url('fontes/Nunito/Nunito-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'inter';
+  src: url('fontes/Inter/Inter-VariableFont_opsz\,wght.ttf') format('truetype');
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variáveis */
+:root {
+  --preto: #000000;
+  --cinza: #c1c1c1;
+  --amarelo: #FFD700;
+  --branco: #ffffff;
+  --cinza-claro: #f4f4f4;
+}
+
+/* Tipografia */
+body {
+  font-family: 'inter', sans-serif;
+  font-weight: 400;
+  background-color: #ffffff;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+p { font-family: 'inter'; }
+h1 { font-family: 'nunito'; }
+h2 { font-size: 2.2rem; font-family: 'nunito'; }
+h3 { font-family: 'nunito'; font-size: 1.25rem; }
+
+/* Header e Nav - IGUAL NAS DUAS PÁGINAS */
+header {
+  background-color: var(--cinza);
+  width: 100%;
+  min-height: 80px;
+  display: flex;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 60px 0 60px;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--preto);
+  font-weight: bold;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #ffd700;
+}
+
+.logo {
+  display: block;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Footer - IGUAL NAS DUAS */
+footer {
+  color: #ffffff;
+  background-color: black;
+  min-height: 200px;
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.listas {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.lista-esquerda, .lista-direita, .lista-meio {
+  font-size: 1rem;
+  line-height: 1.7;
+  padding: 40px 20px;
+  text-align: center;
+  flex: 1 1 300px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* WhatsApp */
+.whatsapp-float {
+  position: fixed;
+  width: 66px;
+  height: 66px;
+  bottom: 44px;
+  right: 44px;
+  background-color: #25D366;
+  border-radius: 50px;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+
+.whatsapp-float:hover {
+  background-color: #128C7E;
+  transform: scale(1.1);
+}

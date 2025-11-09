@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carvalho locações</title>
+    <link rel="stylesheet" href="https://use.typekit.net/abc123xyz.css">
+    <link rel="stylesheet" href="estilo.css" />
+    <link rel="stylesheet" href="base.css">
+    <link rel="shortcut icon" href="fotos/favicon.ico" type="image/x-icon" />
+
+</head>
+
+<body>
+
+    <header>
+
+      <nav>
+        <a href="home.html">
+          <img class="logo" src="fotos/logo.png" alt="Logo carvalho locações" width="130px" height="100px"/>
+        </a>
+
+        <div class="menu-toggle">
+          <span style="width:25px; height:3px; background:#000; display:block; margin:5px 0; transition:0.3s;"></span>
+          <span style="width:25px; height:3px; background:#000; display:block; margin:5px 0; transition:0.3s;"></span>
+          <span style="width:25px; height:3px; background:#000; display:block; margin:5px 0; transition:0.3s;"></span>
+        </div>            
+        
+        <div class="nav-links">
+          <a class="Home" href="#">Início</a>
+          <a href="#sobre-nos">Sobre nós</a>
+          <a href="#equipamentos">Equipamentos</a>
+          <a href="nossos-serviços.html">Nossos Serviços</a>
+          <a href="#Contato">Contato</a>
+        </div>
+      </nav>
+    </header>
+
+    <div class="casa">
+
+      <img class="guindaste_intro" src="fotos/IMG-20251105-WA0020.jpg" alt="guindaste  raio total" />
+
+      <div class="casa_texto">
+        <h1 class="casa_h1-2">
+          CARVALHO LOCAÇÕES
+        </h1>
+
+        <h1 class="casa_h1">
+          Soluções que levam <br>
+          você mais alto.
+        </h1>
+      </div>
+    </div>
+
+    <main>
+
+      <section class="sobrenos" id="sobre-nos">
+
+        <div class="container">
+
+          <div class="titulo">
+            <h2>Sobre Nós</h2>
+          </div>
+
+            <div class="conteudo">
+
+              <div class="texto">
+               <h2>Carvalho Locações - Soluções que te levam mais alto</h2>
+               <p>A Carvalho Locações é uma empresa especializada na locação de guindastes e equipamentos para movimentação e içamento de cargas, oferecendo soluções seguras, eficientes e personalizadas para os mais diversos segmentos industriais e de construção.</p>
+               <p>Atuamos com foco na excelência operacional, priorizando a segurança, a agilidade e a satisfação de nossos clientes.</p>
+               <p>Contamos com uma equipe altamente capacitada e equipamentos modernos, garantindo o suporte técnico necessário para cada projeto. Nosso compromisso é proporcionar o melhor custo-benefício e contribuir para o sucesso das operações de nossos parceiros, sempre com responsabilidade e qualidade em cada serviço prestado.</p>
+              </div>
+
+              <div class="imagem">
+                <img src="fotos/IMG-20251105-WA0022.jpg" alt="Equipe da Futura Home Tech" width="550px" height="400px"/>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+     <section class="guindastes-section" id="equipamentos">
+        <div class="titulo">
+          <h2>Equipamentos</h2>
+        </div>
+        
+        <div class="container">
+
+          
+
+          <div class="guindaste-card">
+            <img src="fotos/IMG-20251105-WA0026.jpg" alt="Guindaste Sany SAC2500S - 250 toneladas">
+            <p><strong>Guindaste XCMG - 70 toneladas</strong></p>
+          </div>
+
+          <div class="guindaste-card">
+            <img src="fotos/IMG-20251105-WA0020.jpg" alt="Guindaste XCMG - 220 toneladas">
+            <p><strong>Guindaste XCMG - 70 toneladas</strong></p>
+          </div>
+
+          <div class="guindaste-card">
+            <img src="fotos/IMG-20251105-WA0020.jpg" alt="Guindaste XCMG - 220 toneladas">
+            <p><strong>Guindaste XCMG - 50 toneladas</strong></p>
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+
+    <footer id="Contato">
+      
+      <div class="listas">
+
+        <div class="lista-esquerda">
+          <ul>
+            <li><h3>Contato</h3>
+            <li>📍 ROD BR-116 - APT 806 - BLOCO 03 - PR
+            <li>📱 (41) 9997-9826           
+            <li>✉️ FUTURAHT@GMAIL.COM
+          </ul>
+        </div>
+
+        <div class="lista-meio">
+          <ul>
+            <li><h3>Informações Empresariais</h3>
+              <li>Inscrição Estadual: 9112176273
+              <li>CNPJ: 59.702.154/0001-78        
+         </ul>
+        </div>
+
+        <div class="lista-direita">
+          <ul>
+            <li><h3>Horário de Funcionamento</h3>
+            <li>Segunda a Sexta: 9h às 18h   
+            <li>Sábado: 9h às 13h              
+            <li>Domingo: Fechado
+          </ul>
+        </div>
+
+      </div> 
+
+      <a href="https://wa.me/4199979826" class="whatsapp-float" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
+        alt="WhatsApp" 
+        class="whatsapp-img">
+     </a>    
+    </footer>
+
+  <script>
+    // Menu hamburguer
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    
+    if (menuToggle) {
+      menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        menuToggle.classList.toggle('active');
+      });
+    }
+  </script>
+</body>
+</html>
