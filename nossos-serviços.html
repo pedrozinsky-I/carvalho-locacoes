@@ -16,14 +16,20 @@
     <header>
 
         <nav>
-            <a href="home.html">
+            <a href="index.html">
               <img class="logo" src="fotos/logo.png" alt="Logo carvalho locações" width="130px" height="100px"/>
             </a>
         
+            <div class="menu-toggle">
+              <span style="width:25px; height:3px; background:#000; display:block; margin:5px 0; transition:0.3s;"></span>
+              <span style="width:25px; height:3px; background:#000; display:block; margin:5px 0; transition:0.3s;"></span>
+              <span style="width:25px; height:3px; background:#000; display:block; margin:5px 0; transition:0.3s;"></span>
+            </div>
+        
             <div class="nav-links">
               <a class="Home" href="index.html">Início</a>
-              <a href="home.html#sobre-nos">Sobre nós</a>
-              <a href="home.html#equipamentos">Equipamentos</a>
+              <a href="index.html#sobre-nos">Sobre nós</a>
+              <a href="index.html#equipamentos">Equipamentos</a>
               <a href="nossos-serviços.html">Nossos Serviços</a>
             </div>
         </nav>
@@ -50,59 +56,59 @@
         <div class="container">
 
           <div class="guindaste-card">
-            <img src="fotos/IMG-20251105-WA0006.jpg" >           
+            <img src="fotos/IMG-20251105-WA0006.jpg" alt="Serviço de guindaste">           
           </div>
 
           <div class="guindaste-card">
-            <img src="fotos/IMG-20251105-WA0007.jpg" >          
+            <img src="fotos/IMG-20251105-WA0007.jpg" alt="Serviço de guindaste">          
           </div>
 
           <div class="guindaste-card">
-            <img src="fotos/IMG-20251105-WA0008.jpg" >
+            <img src="fotos/IMG-20251105-WA0008.jpg" alt="Serviço de guindaste">
           </div>
 
           <div class="guindaste-card">
-            <img src="fotos/IMG-20251105-WA0009.jpg" >           
+            <img src="fotos/IMG-20251105-WA0009.jpg" alt="Serviço de guindaste">           
           </div>
 
           <div class="guindaste-card">
-            <img src="fotos/IMG-20251105-WA0011.jpg" >
+            <img src="fotos/IMG-20251105-WA0011.jpg" alt="Serviço de guindaste">
           </div>
 
           <div class="guindaste-card">
-            <img src="fotos/IMG-20251105-WA0012.jpg" >           
+            <img src="fotos/IMG-20251105-WA0012.jpg" alt="Serviço de guindaste">           
           </div>
 
           <div class="guindaste-card">
-            <img src="fotos/IMG-20251105-WA0013.jpg" >          
+            <img src="fotos/IMG-20251105-WA0013.jpg" alt="Serviço de guindaste">          
           </div>
 
           <div class="guindaste-card">
-            <img src="fotos/IMG-20251105-WA0015.jpg" >           
+            <img src="fotos/IMG-20251105-WA0015.jpg" alt="Serviço de guindaste">           
           </div>
 
           <div class="guindaste-card">
-            <img src="fotos/IMG-20251105-WA0016.jpg" >          
+            <img src="fotos/IMG-20251105-WA0016.jpg" alt="Serviço de guindaste">          
           </div>
 
           <div class="guindaste-card">
-            <img src="fotos/IMG-20251105-WA0017.jpg" >
+            <img src="fotos/IMG-20251105-WA0017.jpg" alt="Serviço de guindaste">
           </div>
 
           <div class="guindaste-card">
-            <img src="fotos/IMG-20251105-WA0018.jpg" >           
+            <img src="fotos/IMG-20251105-WA0018.jpg" alt="Serviço de guindaste">           
           </div>
 
           <div class="guindaste-card">
-            <img src="fotos/IMG-20251105-WA0019.jpg" >          
+            <img src="fotos/IMG-20251105-WA0019.jpg" alt="Serviço de guindaste">          
           </div>
 
           <div class="guindaste-card">
-            <img src="fotos/IMG-20251105-WA0021.jpg" >           
+            <img src="fotos/IMG-20251105-WA0021.jpg" alt="Serviço de guindaste">           
           </div>
 
           <div class="guindaste-card">
-            <img src="fotos/IMG-20251105-WA0027.jpg" >          
+            <img src="fotos/IMG-20251105-WA0027.jpg" alt="Serviço de guindaste">          
           </div>
 
         </div>
@@ -143,21 +149,6 @@
             </div>
           </div>
 
-        </div>
-          <script>
-            // Só um vídeo toca por vez
-            const videos = document.querySelectorAll('video');
-            
-            videos.forEach(video => {
-              video.addEventListener('play', () => {
-                videos.forEach(otherVideo => {
-                  if (otherVideo !== video) {
-                    otherVideo.pause();
-                  }
-                });
-              });
-            });
-          </script>
         </div>
 
       </section>
@@ -200,10 +191,35 @@
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
              alt="WhatsApp" 
              class="whatsapp-img">
-     </a>
+      </a>
 
-     
     </footer>
+
+  <script>
+    // Menu hamburguer
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    
+    if (menuToggle) {
+      menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        menuToggle.classList.toggle('active');
+      });
+    }
+
+    // Só um vídeo toca por vez
+    const videos = document.querySelectorAll('video');
+    
+    videos.forEach(video => {
+      video.addEventListener('play', () => {
+        videos.forEach(otherVideo => {
+          if (otherVideo !== video) {
+            otherVideo.pause();
+          }
+        });
+      });
+    });
+  </script>
 
 </body>
 </html>
