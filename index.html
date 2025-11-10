@@ -13,19 +13,22 @@
 
 <body>
 
+    <input type="checkbox" id="menu-toggle-checkbox" class="menu-toggle-checkbox" />
     <header>
 
       <nav>
-        <a href="home.html">
-          <img class="logo" src="fotos/logo.png" alt="Logo carvalho locações" width="130px" height="100px"/>
-        </a>
+        <div class="container-header">
+          <a href="index.html">
+            <img class="logo" src="fotos/logo.png" alt="Logo carvalho locações" width="130px" height="100px"/>
+          </a>
 
-        <div class="menu-toggle">
-          <span style="width:25px; height:3px; background:#000; display:block; margin:5px 0; transition:0.3s;"></span>
-          <span style="width:25px; height:3px; background:#000; display:block; margin:5px 0; transition:0.3s;"></span>
-          <span style="width:25px; height:3px; background:#000; display:block; margin:5px 0; transition:0.3s;"></span>
+           <label class="menu-toggle" for="menu-toggle-checkbox" aria-label="Abrir menu">
+            <span style="width:25px; height:3px; background:#000; display:block; margin:5px 0; transition:0.3s;"></span>
+            <span style="width:25px; height:3px; background:#000; display:block; margin:5px 0; transition:0.3s;"></span>
+            <span style="width:25px; height:3px; background:#000; display:block; margin:5px 0; transition:0.3s;"></span>
+           </label>
         </div>            
-        
+      
         <div class="nav-links">
           <a class="Home" href="#">Início</a>
           <a href="#sobre-nos">Sobre nós</a>
@@ -35,6 +38,20 @@
         </div>
       </nav>
     </header>
+
+    <label class="overlay" for="menu-toggle-checkbox" aria-hidden="true"></label>
+
+      <aside class="mobile-panel" aria-hidden="true">
+        <div class="painel-items">
+          <nav class="mobile-links">
+            <a class="Home" href="#inicio">Início</a>
+            <a href="#sobre-nos">Sobre nós</a>
+            <a href="#equipamentos">Equipamentos</a>
+            <a href="nossos-serviços.html">Nossos Serviços</a>
+            <a href="#Contato">Contato</a>
+          </nav>
+        </div>
+      </aside>
 
     <div class="casa">
 
@@ -65,7 +82,6 @@
             <div class="conteudo">
 
               <div class="texto">
-               <h2>Carvalho Locações - Soluções que te levam mais alto</h2>
                <p>A Carvalho Locações é uma empresa especializada na locação de guindastes e equipamentos para movimentação e içamento de cargas, oferecendo soluções seguras, eficientes e personalizadas para os mais diversos segmentos industriais e de construção.</p>
                <p>Atuamos com foco na excelência operacional, priorizando a segurança, a agilidade e a satisfação de nossos clientes.</p>
                <p>Contamos com uma equipe altamente capacitada e equipamentos modernos, garantindo o suporte técnico necessário para cada projeto. Nosso compromisso é proporcionar o melhor custo-benefício e contribuir para o sucesso das operações de nossos parceiros, sempre com responsabilidade e qualidade em cada serviço prestado.</p>
@@ -151,16 +167,13 @@
     </footer>
 
   <script>
-    // Menu hamburguer
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
-    
-    if (menuToggle) {
-      menuToggle.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-        menuToggle.classList.toggle('active');
-      });
-    }
+    // fecha o painel (desmarca o checkbox) ao clicar em qualquer link do painel móvel
+    document.querySelectorAll('.mobile-panel a').forEach(a =>
+      a.addEventListener('click', () => {
+        const cb = document.getElementById('menu-toggle-checkbox');
+        if (cb) cb.checked = false;
+      })
+    );
   </script>
 </body>
 </html>

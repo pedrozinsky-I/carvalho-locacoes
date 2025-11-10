@@ -13,28 +13,47 @@
 
 <body>
 
+    <input type="checkbox" id="menu-toggle-checkbox" class="menu-toggle-checkbox" />
     <header>
 
-        <nav>
-            <a href="index.html">
-              <img class="logo" src="fotos/logo.png" alt="Logo carvalho locações" width="130px" height="100px"/>
-            </a>
-        
-            <div class="menu-toggle">
-              <span style="width:25px; height:3px; background:#000; display:block; margin:5px 0; transition:0.3s;"></span>
-              <span style="width:25px; height:3px; background:#000; display:block; margin:5px 0; transition:0.3s;"></span>
-              <span style="width:25px; height:3px; background:#000; display:block; margin:5px 0; transition:0.3s;"></span>
-            </div>
-        
-            <div class="nav-links">
-              <a class="Home" href="index.html">Início</a>
-              <a href="index.html#sobre-nos">Sobre nós</a>
-              <a href="index.html#equipamentos">Equipamentos</a>
-              <a href="nossos-serviços.html">Nossos Serviços</a>
-            </div>
-        </nav>
+      <nav>
+        <div class="container-header">
+          <a href="index.html">
+            <img class="logo" src="fotos/logo.png" alt="Logo carvalho locações" width="130px" height="100px"/>
+          </a>
 
+           <label class="menu-toggle" for="menu-toggle-checkbox" aria-label="Abrir menu">
+            <span style="width:25px; height:3px; background:#000; display:block; margin:5px 0; transition:0.3s;"></span>
+            <span style="width:25px; height:3px; background:#000; display:block; margin:5px 0; transition:0.3s;"></span>
+            <span style="width:25px; height:3px; background:#000; display:block; margin:5px 0; transition:0.3s;"></span>
+           </label>
+        </div>            
+      
+        <div class="nav-links">
+          <a class="Home" href="index.html">Início</a>
+          <a href="#sobre-nos">Sobre nós</a>
+          <a href="#equipamentos">Equipamentos</a>
+          <a href="nossos-serviços.html">Nossos Serviços</a>
+          <a href="#Contato">Contato</a>
+        </div>
+      </nav>
     </header>
+
+
+    <label class="overlay" for="menu-toggle-checkbox" aria-hidden="true"></label>
+
+      <aside class="mobile-panel" aria-hidden="true">
+        <div class="painel-items">
+          <nav class="mobile-links">
+            <a class="Home" href="index.html">Início</a>
+            <a href="#sobre-nos">Sobre nós</a>
+            <a href="#equipamentos">Equipamentos</a>
+            <a href="nossos-serviços.html">Nossos Serviços</a>
+            <a href="#Contato">Contato</a>
+          </nav>
+        </div>
+      </aside>
+
 
     <div class="casa">
 
@@ -196,17 +215,6 @@
     </footer>
 
   <script>
-    // Menu hamburguer
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
-    
-    if (menuToggle) {
-      menuToggle.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-        menuToggle.classList.toggle('active');
-      });
-    }
-
     // Só um vídeo toca por vez
     const videos = document.querySelectorAll('video');
     
@@ -219,6 +227,14 @@
         });
       });
     });
+
+    // fecha o painel (desmarca o checkbox) ao clicar em qualquer link do painel móvel
+    document.querySelectorAll('.mobile-panel a').forEach(a =>
+      a.addEventListener('click', () => {
+        const cb = document.getElementById('menu-toggle-checkbox');
+        if (cb) cb.checked = false;
+      })
+    );
   </script>
 
 </body>

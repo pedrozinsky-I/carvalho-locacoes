@@ -12,6 +12,8 @@
   flex-direction: column;
   cursor: pointer;
   padding: 5px;
+    position: relative;
+  z-index: 120;
 }
 
 /*estilo para a imagem*/
@@ -408,20 +410,6 @@ main {
   }
 }
 
-/* Animações para o menu hamburguer */
-.menu-toggle.active span:nth-child(1) {
-  transform: rotate(-45deg) translate(-5px, 6px);
-}
-
-.menu-toggle.active span:nth-child(2) {
-  opacity: 0;
-}
-
-.menu-toggle.active span:nth-child(3) {
-  transform: rotate(45deg) translate(-5px, -6px);
-}
-
-
 /* Versão flutuante para mobile */
 .whatsapp-float {
   position: fixed;
@@ -451,4 +439,107 @@ main {
 .whatsapp-img {
   width: 40px;
   height: 40px;
+}
+
+/* checkbox controlador (escondido visualmente) */
+.menu-toggle-checkbox {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Menu hamburguer para mobile (agora é label) */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 5px;
+  position: relative;
+  z-index: 120; /* ficar acima do overlay */
+}
+
+/* linhas do hamburguer */
+.menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background: #000;
+  display: block;
+  margin: 5px 0;
+  transition: transform 0.3s ease, opacity 0.25s ease;
+}
+
+/* quando o checkbox estiver marcado: abrir painel + overlay e transformar icon */
+.menu-toggle-checkbox:checked ~ .mobile-panel {
+  transform: translateX(0);
+}
+
+.menu-toggle-checkbox:checked ~ .overlay {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* transformar hamburger em X */
+.menu-toggle-checkbox:checked ~ header .menu-toggle span:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.menu-toggle-checkbox:checked ~ header .menu-toggle span:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle-checkbox:checked ~ header .menu-toggle span:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* garantir que overlay seja clicável e fique atrás do botão (z-index) */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s;
+  z-index: 95;
+  cursor: pointer;
+}
+
+/* painel já tinha transform translateX(100%) por padrão */
+.mobile-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  max-width: 85%;
+  height: 100%;
+  background: #fff;
+  box-shadow: -6px 0 20px rgba(0,0,0,0.15);
+  transform: translateX(100%);
+  transition: transform 0.35s ease;
+  z-index: 100;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* responsivo: mostrar botão apenas em telas pequenas */
+@media screen and (max-width: 767px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-links { display: none; }
+}
+
+/* esconder painel/overlay em telas grandes (mantém nav desktop) */
+@media (min-width: 768px) {
+  .overlay,
+  .mobile-panel {
+    display: none;
+  }
+  .nav-links {
+    display: flex !important;
+  }
 }
