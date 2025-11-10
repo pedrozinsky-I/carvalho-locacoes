@@ -173,11 +173,12 @@ main {
 
 .lightbox-content {
   position: relative;
-  max-width: 90%;
-  max-height: 90%;
+  max-width: 90vw;
+  max-height: 90vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 20px;
 }
 
 .lightbox img {
@@ -198,6 +199,10 @@ main {
   border: none;
   padding: 10px;
   transition: transform 0.2s ease;
+}
+
+.lightbox-close:hover {
+  transform: scale(1.2);
 }
 
 .guindaste-card-video {
@@ -297,6 +302,24 @@ main {
   .lista-direita {
     padding: 80px 40px;
   }
+
+  .lightbox-content {
+    max-width: 70vw;
+    max-height: 75vh;
+    padding: 20px;
+  }
+
+  .lightbox img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .lightbox-close {
+    top: -40px;
+    right: 0;
+    font-size: 32px;
+  }
+
 }
 
 /* Mobile */
@@ -309,8 +332,41 @@ main {
   .guindaste-card p {
     font-size: 14px;
   }
+
+    .lightbox-content {
+    max-width: 95%;
+    max-height: 85vh;
+  }
+
+  .lightbox img {
+    max-width: 100%;
+    max-height: 85vh;
+  }
+
+  .lightbox-close {
+    top: -35px;
+    font-size: 28px;
+  }
+
 }
 
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .lightbox-content {
+    max-width: 90vw;
+    max-height: 85vh;
+    padding: 20px;
+  }
+
+  .lightbox img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .lightbox-close {
+    top: -40px;
+    font-size: 32px;
+  }
+}
 
 @media screen and (max-width: 767px) {
   .menu-toggle {
@@ -464,6 +520,24 @@ main {
   .guindastes-section .container video {
     max-height: 300px;
   }
+
+  .lightbox-content {
+    max-width: 100%;
+    max-height: 80vh;
+    padding: 0 10px;
+  }
+
+  .lightbox img {
+    max-width: calc(100vw - 20px);
+    max-height: 80vh;
+  }
+
+  .lightbox-close {
+    top: -30px;
+    right: 5px;
+    font-size: 24px;
+  }
+
 }
 
 /* Versão flutuante para mobile */

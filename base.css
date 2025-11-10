@@ -131,16 +131,25 @@ ul {
   bottom: 44px;
   right: 44px;
   background-color: #25D366;
+  color: white;
   border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
   box-shadow: 2px 2px 3px #999;
   z-index: 100;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.3s;
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
 
 .whatsapp-float:hover {
   background-color: #128C7E;
   transform: scale(1.1);
+}
+
+.whatsapp-img {
+  width: 40px;
+  height: 40px;
 }
