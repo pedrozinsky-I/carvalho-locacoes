@@ -577,6 +577,20 @@ main {
   gap: 10px;
 }
 
+.mobile-panel a {
+  padding: 15px 10px;
+  border-bottom: 1px solid #f0f0f0;
+  text-decoration: none;
+  color: var(--preto);
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.mobile-panel a:hover {
+  background-color: #f9f9f9;
+  color: var(--amarelo);
+}
+
 /* responsivo: mostrar botão apenas em telas pequenas */
 @media screen and (max-width: 767px) {
   .menu-toggle {
