@@ -589,7 +589,18 @@ main {
   cursor: pointer;
   padding: 5px;
   position: relative;
-  z-index: 120; /* ficar acima do overlay */
+  z-index: 120;
+}
+
+
+.menu-toggle-checkbox {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
 }
 
 /* linhas do hamburguer */
@@ -601,6 +612,7 @@ main {
   margin: 5px 0;
   transition: transform 0.3s ease, opacity 0.25s ease;
 }
+
 
 /* quando o checkbox estiver marcado: abrir painel + overlay e transformar icon */
 .menu-toggle-checkbox:checked ~ .mobile-panel {
@@ -640,8 +652,7 @@ main {
   position: fixed;
   top: 0;
   right: 0;
-  width: 300px;
-  max-width: 85%;
+  width: 100%;
   height: 100%;
   background: #fff;
   box-shadow: -6px 0 20px rgba(0,0,0,0.15);
@@ -651,7 +662,75 @@ main {
   padding: 20px;
   display: flex;
   flex-direction: column;
+  gap: 15px;
+}
+
+.mobile-logo {
+  display: block;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.mobile-logo img {
+  width: 100px;
+  height: auto;
+  object-fit: contain;
+}
+
+.mobile-panel a {
+  padding: 15px 10px;
+  border-bottom: 1px solid #f0f0f0;
+  text-decoration: none;
+  color: var(--preto);
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.mobile-panel a:hover {
+  background-color: #f9f9f9;
+  color: var(--amarelo);
+}
+
+.mobile-links {
+  display: flex;
+  flex-direction: column;
   gap: 10px;
+  margin-top: 10px;
+}
+
+
+.mobile-contato {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 2px solid #f0f0f0;
+}
+
+.mobile-email {
+  padding: 12px 10px;
+  text-decoration: none;
+  color: var(--preto);
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  display: block;
+  text-align: left;
+}
+
+.mobile-email:hover {
+  background-color: #f9f9f9;
+  color: var(--amarelo);
+  padding-left: 15px;
+}
+
+@media screen and (max-width: 767px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-links { display: none; }
 }
 
 /* responsivo: mostrar botão apenas em telas pequenas */

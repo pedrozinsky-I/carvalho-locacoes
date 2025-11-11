@@ -31,8 +31,8 @@
       
         <div class="nav-links">
           <a class="Home" href="index.html">Início</a>
-          <a href="#sobre-nos">Sobre nós</a>
-          <a href="#equipamentos">Equipamentos</a>
+          <a href="index.html#sobre-nos">Sobre nós</a>
+          <a href="index.html#equipamentos">Equipamentos</a>
           <a href="nossos-serviços.html">Nossos Serviços</a>
           <a href="#Contato">Contato</a>
         </div>
@@ -44,13 +44,21 @@
 
       <aside class="mobile-panel" aria-hidden="true">
         <div class="painel-items">
+          <a href="#" class="mobile-logo">
+            <img src="fotos/logo.png" alt="Logo carvalho locações" />
+          </a>
+
           <nav class="mobile-links">
             <a class="Home" href="index.html">Início</a>
-            <a href="#sobre-nos">Sobre nós</a>
-            <a href="#equipamentos">Equipamentos</a>
+            <a href="index.html#sobre-nos">Sobre nós</a>
+            <a href="index.html#equipamentos">Equipamentos</a>
             <a href="nossos-serviços.html">Nossos Serviços</a>
             <a href="#Contato">Contato</a>
           </nav>
+          
+          <div class="mobile-contato">
+            <a href="mailto:carvalho.locacoespr@gmail.com" class="mobile-email">✉️ carvalho.locacoespr@gmail.com</a>
+          </div>
         </div>
       </aside>
 
@@ -66,7 +74,7 @@
 
     <main>
 
-      <section class="guindastes-section" id="equipamentos">
+      <section class="guindastes-section">
 
         <div class="titulo">
           <h2>Fotos</h2>
@@ -160,12 +168,7 @@
               </video>
             </div>
 
-            <div class="guindaste-card-video">
-              <video controls preload="metadata" playsinline>
-                <source src="fotos/VID-20251108-WA0004.mp4" type="video/mp4">
-                Seu navegador não suporta vídeo HTML5.
-              </video>
-            </div>
+          
           </div>
 
         </div>
@@ -176,7 +179,7 @@
 
     <footer>
       
-      <div class="listas">
+      <div class="listas" id="Contato">
 
         <div class="lista-esquerda">
           <ul>
@@ -270,6 +273,14 @@
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') closeLightbox();
     });
+
+        // fecha o painel (desmarca o checkbox) ao clicar em qualquer link do painel móvel
+    document.querySelectorAll('.mobile-panel a').forEach(a =>
+      a.addEventListener('click', () => {
+        const cb = document.getElementById('menu-toggle-checkbox');
+        if (cb) cb.checked = false;
+      })
+    );
 
   </script>
 
